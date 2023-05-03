@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Bootstrap</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class=" container navbar">
+    <h1>Ultimate Joias</h1>
+    <button class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+      <ul class="nav nav-pills d-block d-md-flex">
+        <li class="nav-item"><a class="nav-link active" href="#">Sobre a Loja</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+  <section class="container p-0 mb-2" id="sobre-a-loja">
+    <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="./img/colar.png" class="d-block w-100" alt="Colar">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./img/esmeraldas.jpg" class="d-block w-100" alt="Esmeralda">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+      </div>
+    </div>
+  </section>
+  <main class="container p-0">
+    <div class="row">
+      <div class="col-4">
+        <div class="card h-100 text-bg-dark">
+          <div class="card-header">Joias em Esmeraldas</div><img src="./img/esmeraldas.jpg" alt="">
+          <div class="card-body">
+            <h4 class="cad-tytle">Joias em Ouro com esmeraldas</h4>
+            <p class="card-text">Joias em ouro 18 kilates com esmeraldas naturais </p>
+            <a href="#" class="btn btn-primary">Adquirir</a>
+          </div>
+          <footer class="card-footer">
+            <time>10/04/2023</time>
+          </footer>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card h-100 text-bg-dark">
+          <div class="card-header">Joias com Diamante</div><img src="./img/colar.png" alt="">
+          <div class="card-body">
+            <h4 class="cad-tytle">Jogo de Diamantes</h4>
+            <p class="card-text">Lindo jogo de Colar e Brincos em Diamantes </p>
+            <a href="#" class="btn btn-primary">Adquirir</a>
+          </div>
+          <footer class="card-footer">
+            <time>10/04/2023</time>
+          </footer>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card h-100 text-bg-dark">
+          <div class="card-header">Colar em Perolas</div><img src="./img/colarperola.jpeg" alt="">
+          <div class="card-body">
+            <h4 class="cad-tytle">Colar em Perloas Brancas</h4>
+            <p class="card-text">Lindo colar com Perolas Brancas </p>
+            <a href="#" class="btn btn-primary">Adquirir</a>
+          </div>
+          <footer class="card-footer">
+            <time>10/04/2023</time>
+          </footer>
+        </div>
+      </div>
+  </main>
+  <div class="container p-2">
+    <div class="row">
+      <div class="col-md-5">
+        <h2>Todos Direito Reservados</h2>
+      </div>
+      <div class="col-md-7 align-items-center">
+        <img src="./img/facebook.svg" alt=""><a class="p-1" href="#">Facebook</a>
+        <img src="./img/whatsapp.svg" alt=""><a class="p-1" href="#">Whatsapp</a>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

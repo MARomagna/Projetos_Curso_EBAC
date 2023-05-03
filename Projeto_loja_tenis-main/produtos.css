@@ -1,0 +1,24 @@
+.produtos-titulo {
+  color: rgb(8, 187, 187);
+  border-bottom: 2px solid rgb(8, 187, 187);
+  padding: 15px 0;
+}
+.produtos {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.produtos p {
+  margin: 5px;
+}
+@media (max-width: 650px) {
+  .produtos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 400px) {
+  .produtos li h2 {
+    font-size: 1.2rem;
+  }
+}
