@@ -1,0 +1,41 @@
+@use "cores";
+.footer {
+  background-color: #f5eabc;
+  padding-top: 10px;
+  &__container {
+    padding: 60px 16px;
+    text-align: center;
+  }
+  img {
+    width: 120px;
+    margin: 0 auto 10px;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    @media (max-width: 630px) {
+      gap: 10px;
+    }
+    &__item {
+      display: inline-block;
+      background-color: cores.$corDeFundoBotaoPrimario;
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 16px;
+        @media (max-width: 630px) {
+          justify-content: center;
+        }
+        &:hover {
+          background-color: cores.$corDeFundoBotaoSecundario;
+        }
+      }
+    }
+  }
+  p {
+    padding: 25px;
+    text-align: center;
+  }
+}

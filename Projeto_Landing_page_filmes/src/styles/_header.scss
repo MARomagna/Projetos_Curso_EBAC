@@ -1,0 +1,55 @@
+@use "cores";
+.header {
+  background-color: cores.$corDeFundo;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  transition: background-color 0.5s ease;
+  z-index: 1;
+  &--is-hidden {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    .header {
+      &__links__item:first-child {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 630px) {
+      display: grid;
+      justify-content: center;
+      padding-bottom: 25px;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 16px;
+    @media (max-width: 630px) {
+      justify-content: center;
+      padding: 10px 10px;
+      margin-top: 10px;
+      gap: 10px;
+    }
+  }
+  p {
+    font-size: 4rem;
+    text-shadow: cores.$corDeFundoBotaoPrimario 5px 5px;
+    @media (max-width: 1240px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 1080px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 940px) {
+      display: none;
+    }
+  }
+}

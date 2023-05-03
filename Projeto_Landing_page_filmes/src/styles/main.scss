@@ -1,0 +1,101 @@
+@use "header";
+@use "footer";
+@use "cores";
+@use "introducao";
+@use "filmes";
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../../fonts/Avenir-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../../fonts/Avenir-Bold.woff2);
+  font-weight: 700;
+}
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: cores.$corTextoPrincipal;
+}
+@mixin title($fontSize: 40px) {
+  @include text($fontSize);
+  color: cores.$corTextoSecundario;
+}
+.text--big {
+  @include text(18px);
+  @media (max-width: 768px) {
+    @include text(15px);
+  }
+}
+.text {
+  @include text;
+  @media (max-width: 768px) {
+    @include text(14px);
+  }
+}
+.text--small {
+  @include text(12px);
+  @media (max-width: 768px) {
+    @include text(11px);
+  }
+}
+.title--big {
+  @include title(44px);
+  @media (max-width: 768px) {
+    @include title(26px);
+  }
+}
+.title {
+  @include title;
+  @media (max-width: 768px) {
+    @include title(24px);
+  }
+}
+.title--small {
+  @include title(28px);
+  @media (max-width: 768px) {
+    @include title(22px);
+  }
+}
+.link-text {
+  @include text(18px);
+  color: cores.$corTextoSecundario;
+  text-decoration: underline;
+}
+.button {
+  background-color: cores.$corDeFundoBotaoPrimario;
+  padding: 16px 16px;
+  border-radius: 8px;
+  &:hover {
+    background-color: cores.$corDeFundoBotaoSecundario;
+  }
+}
